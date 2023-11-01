@@ -53,8 +53,6 @@ async def get_dog(pk: int, db: Session = Depends(get_db)):
               response_model=schemas.Dog,
               description='Обновление собаки по id')
 async def patch_dog(pk: int, dog: schemas.Dog, db: Session = Depends(get_db)):
-    if dog.pk < pk:
-        raise HTTPException(status_code=409, detail='The specified PK already exists')
     try:
         dog = await crud.update_dog(db, dog, pk)
     except sqlalchemy.exc.IntegrityError:
