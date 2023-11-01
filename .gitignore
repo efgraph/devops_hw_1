@@ -1,0 +1,10 @@
+.idea/
+app/config/.env
+.env
+api_service/venv
+*venv/
+data
+*/.pytest_cache/
+__pycache__/
+ *.pyc
+*log/
