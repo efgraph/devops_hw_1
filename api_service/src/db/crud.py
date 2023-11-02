@@ -10,6 +10,10 @@ async def create_timestamp(db: Session, timestamp: schemas.TimeStamp):
     return db_timestamp
 
 
+async def get_timestamps(db: Session):
+    return db.query(models.TimeStamp).all()
+
+
 async def create_dog(db: Session, dog: schemas.Dog):
     db_dog = models.Dog(**dog.dict())
     db.add(db_dog)
