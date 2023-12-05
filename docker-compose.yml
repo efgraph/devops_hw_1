@@ -15,10 +15,12 @@ services:
       - "80:80"
 
   api_service:
-    build: ./api_service
+    image: johnhse/api_service:latest
     restart: always
     depends_on:
       - postgres
+    ports:
+      - "5555:8000"
     env_file:
       - ./docker/pg-variables.env
 

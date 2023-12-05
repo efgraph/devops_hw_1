@@ -4,8 +4,8 @@ from fastapi.responses import ORJSONResponse
 from api import views
 
 app = FastAPI(
-    docs_url='/api/openapi',
-    openapi_url='/api/openapi.json',
+    docs_url='/docs',
+    openapi_url='/docs.json',
     default_response_class=ORJSONResponse,
 )
 
