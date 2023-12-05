@@ -8,7 +8,9 @@
 ##### Документация
 _(Договорились с преподавателем, что можно не разворачивать в облаке, если будет сделано через docker-compose)_
 
-http://localhost/api/openapi  
+http://127.0.0.1:5555/docs
+или  
+http://localhost/docs
 или  
 http://localhost/redoc
 
